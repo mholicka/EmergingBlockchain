@@ -1,0 +1,173 @@
+{
+    "settings": {
+        "analysis": {
+            "analyzer": {
+                "category_analysis": {
+                    "type": "custom",
+                    "tokenizer": "comma_token",
+                    "filter": ["lowercase", "english_stop"]
+                }
+            },
+            "tokenizer": {
+                "comma_token": {
+                    "type": "pattern",
+                    "pattern": ","
+                }
+            },
+            "filter": {
+                "english_stop": {
+                    "type": "stop",
+                    "stopwords": "_english_"
+                }
+            }
+        }
+    },
+    "mappings": {
+        "properties": {
+            "location": {
+                "type": "geo_point"
+            },
+            "address": {
+                "type": "text"
+            },
+            "category_groups_list": {
+                "type": "keyword",
+                "fields": {
+                    "individual_categories": {
+                        "type": "text",
+                        "analyzer": "category_analysis",
+                        "fielddata": true
+                    }
+                }
+            },
+            "category_list": {
+                "type": "keyword",
+                "fields": {
+                    "individual_categories": {
+                        "type": "text",
+                        "analyzer": "category_analysis",
+                        "fielddata": true
+                    }
+                }
+            },
+            "cb_url": {
+                "type": "text"
+            },
+            "city": {
+                "type": "keyword"
+            },
+            "closed_on": {
+                "type": "date"
+            },
+            "company_designation": {
+                "type": "keyword"
+            },
+            "country_code": {
+                "type": "keyword"
+            },
+            "created_at": {
+                "type": "date"
+            },
+            "domain": {
+                "type": "text"
+            },
+            "email": {
+                "type": "text"
+            },
+            "employee_count": {
+                "type": "keyword"
+            },
+            "facebook_url": {
+                "type": "text"
+            },
+            "founded_on": {
+                "type": "date"
+            },
+            "homepage_url": {
+                "type": "text"
+            },
+            "last_funding_on": {
+                "type": "date"
+            },
+            "legal_name": {
+                "type": "text"
+            },
+            "linkedin_url": {
+                "type": "text"
+            },
+            "logo_url": {
+                "type": "text"
+            },
+            "name": {
+                "type": "keyword"
+            },
+            "num_exits": {
+                "type": "integer"
+            },
+            "num_funding_rounds": {
+                "type": "integer"
+            },
+            "permalink": {
+                "type": "keyword"
+            },
+            "phone": {
+                "type": "text"
+            },
+            "postal_code": {
+                "type": "text"
+            },
+            "primary_role": {
+                "type": "keyword"
+            },
+            "rank": {
+                "type": "integer"
+            },
+            "region": {
+                "type": "keyword"
+            },
+            "roles": {
+                "type": "keyword"
+            },
+            "short_description": {
+                "type": "text"
+            },
+            "state_code": {
+                "type": "keyword"
+            },
+            "status": {
+                "type": "keyword"
+            },
+            "total_funding": {
+                "type": "long"
+
+            },
+            "total_funding_currency_code": {
+                "type": "keyword"
+            },
+            "total_funding_usd": {
+                "type": "long"
+            },
+            "twitter_url": {
+                "type": "text"
+            },
+            "type": {
+                "type": "keyword"
+            },
+            "updated_at": {
+                "type": "date"
+            },
+            "uuid": {
+                "type": "keyword"
+            },
+            "super_region": {
+                "type": "keyword"
+            },
+            "country-name": {
+                "type": "keyword"
+            },
+            "sub-region": {
+                "type": "keyword"
+            }
+        }
+    }
+}

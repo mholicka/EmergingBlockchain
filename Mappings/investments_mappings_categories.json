@@ -1,0 +1,193 @@
+{
+    "settings": {
+        "analysis": {
+            "analyzer": {
+                "category_analysis": {
+                    "type": "custom",
+                    "tokenizer": "comma_token",
+                    "filter": ["lowercase", "english_stop"]
+                }
+            },
+            "tokenizer": {
+                "comma_token": {
+                    "type": "pattern",
+                    "pattern": ","
+                }
+            },
+            "filter": {
+                "english_stop": {
+                    "type": "stop",
+                    "stopwords": "_english_"
+                }
+            }
+        }
+    },
+    "mappings": {
+        "properties": {
+            "Invested Company": {
+                "type": "keyword"
+            },
+            "FundingRoundUUID": {
+                "type": "keyword"
+            },
+            "Number Of Investors": {
+                "type": "integer"
+            },
+            "Money Raised In Funding Round": {
+                "type": "long"
+            },
+            "Investment Firm Permalink": {
+                "type": "keyword"
+            },
+            "Investment Firm UUID": {
+                "type": "keyword"
+            },
+            "Investment Type": {
+                "type": "keyword"
+            },
+            "Funding Type": {
+                "type": "keyword"
+            },
+            "Funding Series": {
+                "type": "keyword"
+            },
+            "USD Invested (By Investor)": {
+                "type": "long"
+            },
+            "Date Announced": {
+                "type": "date"
+            },
+            "location_firm": {
+                "type": "geo_point"
+            },
+
+            "category_groups_list_firm": {
+                "type": "keyword",
+                "fields": {
+                    "individual_categories": {
+                        "type": "text",
+                        "analyzer": "category_analysis",
+                        "fielddata": true
+                    }
+                }
+            },
+            "category_list_firm": {
+                "type": "keyword",
+                "fields": {
+                    "individual_categories": {
+                        "type": "text",
+                        "analyzer": "category_analysis",
+                        "fielddata": true
+                    }
+                }
+            },
+            "city_firm": {
+                "type": "keyword"
+            },
+            "country_code_firm": {
+                "type": "keyword"
+            },
+            "employee_count_firm": {
+                "type": "keyword"
+            },
+            "founded_on_firm": {
+                "type": "date"
+            },
+            "last_funding_on_firm": {
+                "type": "date"
+            },
+            "name_firm": {
+                "type": "keyword"
+            },
+            "status_firm": {
+                "type": "keyword"
+            },
+            "total_funding_usd_firm": {
+                "type": "long"
+            },
+            "super_region_firm": {
+                "type": "keyword"
+            },
+            "location_invest": {
+                "type": "geo_point"
+            },
+            "category_groups_list_invest": {
+                "type": "keyword",
+                "fields": {
+                    "individual_categories": {
+                        "type": "text",
+                        "analyzer": "category_analysis",
+                        "fielddata": true
+                    }
+                }
+            },
+            "category_list_invest": {
+                "type": "keyword",
+                "fields": {
+                    "individual_categories": {
+                        "type": "text",
+                        "analyzer": "category_analysis",
+                        "fielddata": true
+                    }
+                }
+            },
+            "city_invest": {
+                "type": "keyword"
+            },
+            "country_code_invest": {
+                "type": "keyword"
+            },
+            "employee_count_invest": {
+                "type": "keyword"
+            },
+            "founded_on_invest":{
+                "type":"date"
+            },
+            "total_funding_usd_invest": {
+                "type": "long"
+            },
+            
+            "last_funding_on_invest": {
+                "type": "date"
+            },
+            "name_invest": {
+                "type": "keyword"
+            },
+            "status_invest": {
+                "type": "keyword"
+            },
+            
+            "company_designation_invest": {
+                "type": "keyword"
+            },
+            "super_region_invest": {
+                "type": "keyword"
+            },
+            "num_exits": {
+                "type": "integer"
+            },
+            "country-name_firm": {
+                "type": "keyword"
+            },
+            "sub-region_firm": {
+                "type": "keyword"
+            },
+            "country-name_invest": {
+                "type": "keyword"
+            },
+            "sub-region_invest": {
+                "type": "keyword"
+            },
+            "permalink_firm": {
+                "type": "keyword"
+            },
+            "cat_firm":{
+                "type": "keyword"
+            },
+            "cat_invest":{
+                "type": "keyword"
+            }
+
+        }
+    }
+}

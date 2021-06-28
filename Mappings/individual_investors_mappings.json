@@ -1,0 +1,87 @@
+{
+    "mappings": {
+        "properties": {
+            "location": {
+                "type": "geo_point"
+            },
+            "cb_url": {
+                "type": "text"
+            },
+            "city": {
+                "type": "keyword"
+            },
+            "country_code": {
+                "type": "keyword"
+            },
+            "created_at": {
+                "type": "date"
+            },
+            "facebook_url": {
+                "type": "text"
+            },
+            "featured_job_organization_name": {
+                "type": "keyword"
+            },
+            "featured_job_organization_uuid": {
+                "type": "keyword"
+            },
+            "featured_job_title": {
+                "type": "keyword"
+            },
+            "first_name": {
+                "type": "keyword"
+            },
+            "gender": {
+                "type": "keyword"
+            },
+            "last_name": {
+                "type": "keyword"
+            },
+            "linkedin_url": {
+                "type": "text"
+            },
+            "logo_url": {
+                "type": "text"
+            },
+            "name": {
+                "type": "keyword"
+            },
+            "permalink": {
+                "type": "keyword"
+            },
+            "rank": {
+                "type": "integer"
+            },
+            "region": {
+                "type": "keyword"
+            },
+            "state_code": {
+                "type": "keyword"
+            },
+            "twitter_url": {
+                "type": "text"
+            },
+            "type": {
+                "type": "keyword"
+            },
+            "updated_at": {
+                "type": "date"
+            },
+            "uuid": {
+                "type": "keyword"
+            },
+            "company_designation": {
+                "type": "keyword"
+            },
+            "super_region": {
+                "type": "keyword"
+            },
+            "country-name": {
+                "type": "keyword"
+            },
+            "sub-region": {
+                "type": "keyword"
+            }
+        }
+    }
+}
